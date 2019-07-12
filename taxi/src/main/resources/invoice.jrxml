@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="invoice" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="46c53560-65de-4984-88d2-8f09fa19593a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<field name="invoiceNo" class="java.lang.String"/>
+	<field name="time" class="java.lang.String"/>
+	<field name="amt" class="java.lang.Double"/>
+	<field name="driverName" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="87" splitType="Stretch">
+			<staticText>
+				<reportElement x="235" y="0" width="65" height="30" forecolor="#3366FF" uuid="1d014556-6758-479d-bc19-8f3c56b2082b"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TAXI24]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="235" y="30" width="77" height="30" uuid="68ecaf8f-b608-4c82-81c1-83431fcea519"/>
+				<text><![CDATA[Kigali, Rwanda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="242" y="55" width="58" height="30" uuid="8d9974ce-c302-4e5a-a39a-8084a22d2bb8"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INVOICE]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-13" y="79" width="573" height="1" uuid="1ff40651-61ea-43d1-9743-7f61afe2cda3"/>
+			</line>
+			<staticText>
+				<reportElement x="430" y="64" width="50" height="20" uuid="57c825d5-bdf5-4649-bd0d-4eb84ab0dab5"/>
+				<text><![CDATA[Invoice no:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="480" y="64" width="100" height="20" uuid="d999b6ab-b84b-4bfc-96e5-4f15ec6a34af"/>
+				<textFieldExpression><![CDATA[$F{invoiceNo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="26" width="100" height="30" uuid="02fc2076-703c-45ff-9525-9f1edc0adaa9"/>
+				<text><![CDATA[Trip Time:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="53" width="100" height="30" uuid="7ed2ca3e-7111-4217-8903-962e23eb3c79"/>
+				<text><![CDATA[Amount Due:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="0" width="100" height="26" uuid="38a3b784-67f1-4477-a6cf-a5eeb9224a57"/>
+				<text><![CDATA[Drivers Name:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="26" width="100" height="20" uuid="7a875876-73f3-4931-b90b-c8c47964199c"/>
+				<textFieldExpression><![CDATA[$F{time}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00#;#,##0.00#-">
+				<reportElement x="180" y="56" width="100" height="20" uuid="d5bee4cf-3166-482c-9afb-0f3aa3d39bce"/>
+				<textFieldExpression><![CDATA[$F{amt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="1" width="100" height="20" uuid="f86cb788-79cc-4008-9c39-a541b65569ad"/>
+				<textFieldExpression><![CDATA[$F{driverName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="1" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="1" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="2" splitType="Stretch"/>
+	</summary>
+</jasperReport>
