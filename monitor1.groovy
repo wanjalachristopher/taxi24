@@ -8,7 +8,7 @@ job('Server Monitor') {
 		 httpMode('GET')
 		    
 		 }
-	     validResponseCodes(200)
+	     validResponseCodes()
 	 
 	}
   
