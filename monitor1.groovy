@@ -1,4 +1,4 @@
-job('Server Monitor') {
+job('Backend 1') {
   
     triggers {
         cron('*/5 * * * *')
